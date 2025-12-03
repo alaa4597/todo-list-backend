@@ -10,7 +10,9 @@ app.get("/", (req, res) => {
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:4200"],
+    origin: ["http://localhost:4200",
+      "https://todo-list-frontend-orcin.vercel.app/"
+    ],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
